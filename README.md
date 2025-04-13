@@ -100,7 +100,7 @@ Feel free to use, modify, and distribute it for academic or personal use.
 
 **Akash Pandey**  
 Passionate about tech, design, and education 🌱  
-🔗 [LinkedIn](https://www.linkedin.com/) | [GitHub](https://github.com/theakp03)
+🔗 [LinkedIn](https://www.linkedin.com/in/akash-pandey-792ba8317) | [GitHub](https://github.com/theakp03)
 
 ---
 
