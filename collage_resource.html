@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="website.css"> -->
+  <title>webproject</title>
+  <style>
+    /* Header */
+    .message {
+      margin: 0%;
+      padding: 0%;
+      /* display: flexbox; */
+      float: right;
+      position: fixed;
+      top: 80%;
+      bottom: 20%;
+      left: 95%;
+      right: 5%;
+
+    }
+
+    header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      position: relative;
+      top: 0;
+      z-index: 1000;
+      unicode-bidi: isolate;
+    }
+
+    header h4 {
+      margin: 0%;
+    }
+
+
+    div.logo {
+      display: inline;
+    }
+
+    form input {
+      border-radius: 4px;
+    }
+
+    form button {
+      border-radius: 4px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+    }
+
+    /* .upload-btn {
+      background: #ff5722;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .login-btn {
+      background: #4207af;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+    } */
+
+    /* main */
+    /* section1 */
+    .hero {
+      margin: 2px;
+      padding: 2px;
+      display: flexbox;
+      background-image: url("banner.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .hero p {
+      font-style: italic;
+    }
+
+    .download_notes-btn {
+      background: #0c23f1;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .upload_notes-btn {
+      background: #0a07da;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+    }
+
+    /* text */
+    /* .text {
+      margin: 4px;
+      padding: 2px;
+      font-style: Helvetica;
+      font-size: 4rem;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Times New Roman', Times, serif;
+
+    }
+
+    .text p {
+      font-size: small;
+      font-family: 'Times New Roman', Times, serif;
+
+    } */
+
+    /* section2 */
+    .select_grid {
+      margin: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+    }
+
+    /* .grid{
+     
+    } */
+
+    .select_grid select {
+      margin: 5px;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      display: inline;
+
+    }
+
+    /* .grid {
+      padding-left: 5rem;
+    }
+
+    .grid select {
+      border-radius: 5px;
+    } */
+
+    /*section 3*/
+    /* Grid Container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      /* Responsive columns */
+      gap: 20px;
+      /* Space between cards */
+      padding: 20px;
+      max-width: 1200px;
+      /* Limit width */
+      margin: 0 auto;
+      /* Center align */
+    }
+
+    /* Card Style */
+    .card {
+      border-radius: 16px;
+      /* Rounded corners */
+      overflow: hidden;
+      /* Hide overflow content */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* Soft shadow */
+      transition: transform 0.3s ease;
+      /* Smooth animation */
+    }
+
+    /* Card Hover Effect */
+    .card:hover {
+      transform: translateY(-10px);
+      /* Lift card on hover */
+    }
+
+    /* Card Image */
+    .card img {
+      width: 100%;
+      /* Full width */
+      height: 180px;
+      /* Fixed height */
+      object-fit: cover;
+      /* Keep image ratio */
+    }
+
+    /* Card Content */
+    .card h2 {
+      font-size: 1.5rem;
+      /* Title size */
+      margin: 16px 0 8px;
+      text-transform: uppercase;
+      /* Uppercase headings */
+    }
+
+    .card p {
+      color: #555;
+      /* Text color */
+      margin-bottom: 16px;
+    }
+
+    /* Button Style */
+    .card button {
+      background-color: black;
+      /* Button background */
+      color: white;
+      /* Text color */
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    /* Button Hover Effect */
+    .card button:hover {
+      background-color: #444;
+      /* Darker on hover */
+    }
+
+    /* Card Colors (Custom Backgrounds) */
+    .chemistry {
+      background: #ad0a92;
+    }
+
+    /* dark pink */
+    .mathematics {
+      background: #03456b;
+    }
+
+    /* Navy */
+    .physics {
+      background: #a71414;
+    }
+
+    /* Dark red */
+    .botany {
+      background: #02e28c;
+    }
+
+    /* Light green */
+    /* message */
+    /* .message{
+        margin: 0%;
+        padding: 0%;
+        /* display: flexbox; */
+    /* float: right;
+        position:relative;
+        bottom: 80rem; */
+
+    .motivation{
+      background: fixed;
+    }
+
+
+    /* Footer */
+    footer {
+      background: rgb(9, 99, 110);
+      color: white;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .footer_grid {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      flex-wrap: wrap;
+    }
+
+    footer input {
+      border-radius: 5px;
+    }
+
+    footer button {
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="collage_resource.html">
+        <img src="graduation-cap.png" width="50rem" height="50rem" style="align-items: center" /></a>
+      <h4>
+        Education Resource
+      </h4>
+
+    </div>
+
+    <nav>
+      <ul>
+        <!-- <li><a href="collage_resource.html">Home</a></li> -->
+        <li class="list"><a href="notes_gallery.html">Notes Gallery</a></li>
+        <li class="list"><a href="collage.html">Collage</a></li>
+        <li class="list"><a href="Reel.html">Reel</a></li>
+        <li class="list"><a href="Feedback_post.html">Feedback post</a></li>
+
+
+
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <button onclick="myFunction()">Dark/light</button>
+        <script>
+          function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+          }
+        </script>
+      </ul>
+    </nav>
+    <!-- <li><a href="login.html" class="login-btn">Login</a></li>
+        <li><a href="signup.html" class="login-btn">Signup</a></li>
+        <li><a href="upload.html" class="upload-btn">Upload</a></li> -->
+    <div> <a href="profile.html">
+        <li><img src="profile3.png" alt="profile"></li>
+      </a>
+    </div>
+
+
+  </header>
+  <main>
+    <section class="hero">
+      <h2>Empowering Student with The Best Collage Resource</h2>
+      <p>
+        Access a wide range of study <br />
+        material from top institution. <br />
+        Share knowledge, collaborate, <br />
+        and stay ahead in your academics.<br />
+      </p>
+      <a href="upload.html" class="download_notes-btn">Download Notes</a>
+      <a href="upload.html" class="upload_notes-btn">Upload Notes</a>
+    </section>
+    <!-- <section class="text">
+      <div>
+        Most Downloaded Study materials
+        <br />
+        <p>Get the Best Notes & Papers</p>
+      </div>
+    </section> -->
+
+    <div class="select_grid">
+      <div class="grid">
+        <label>College</label><br />
+        <select name="collage">
+          <option value="">Select College</option>
+          <option value="">NIT PATNA</option>
+          <option value="">MNIT ALLAHABAD</option>
+          <option value="">NIT DELHI</option>
+          <option value="">NIT SILCHAR</option>
+          <option value="">NIT HAMIRPUR</option>
+        </select>
+      </div>
+      <div class="grid">
+        <label>Semester</label><br />
+        <select>
+          <option>Select Semester</option>
+          <option>1st sem</option>
+          <option>2st sem</option>
+          <option>3st sem</option>
+          <option>4st sem</option>
+          <option>5st sem</option>
+          <option>6st sem</option>
+          <option>7st sem</option>
+          <option>8st sem</option>
+        </select>
+      </div>
+      <div class="grid">
+        <label>Subject</label><br />
+        <select>
+          <option>Select Subject</option>
+          <option value="">CHEMISTRY</option>
+          <option value="">MATHEMATICS</option>
+          <option value="">PHYSICS</option>
+          <option value="">BOTANY</option>
+        </select>
+      </div>
+      <div class="grid">
+        <label>Type of Resource</label><br />
+        <select>
+          <option>Notes, Question papers, Project Reports</option>
+          <option value="">Notes</option>
+          <option value="">Question Papers</option>
+          <option value="">Project Reports</option>
+        </select>
+      </div>
+    </div>
+    <section>
+      <div class="grid-container">
+        <div class="card chemistry">
+          <a href="chemistry.html">
+            <img src="chemistry.avif" alt="Chemistry" />
+          </a>
+          <h2>Chemistry</h2>
+          <p>Learn about hosting built for scale and reliability.</p>
+          <a href="chemistry.html">
+            <button>See now</button></a>
+        </div>
+
+        <div class="card mathematics">
+          <a href="mathR.html">
+            <img src="math.avif" alt="Mathematics" />
+          </a>
+          <h2>Mathematics</h2>
+          <p>Learn about hosting built for scale and reliability.</p>
+          <a href="mathR.html"><button>See now</button></a>
+        </div>
+
+        <div class="card physics">
+          <img src="physics.jpg" alt="Physics" />
+          <h2>Physics</h2>
+          <p>Learn about hosting built for scale and reliability.</p>
+          <button>See now</button>
+        </div>
+
+        <div class="card botany">
+          <img src="botany.jpg" alt="Botany" />
+          <h2>Botany</h2>
+          <p>Learn about hosting built for scale and reliability.</p>
+          <button>See now</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="motivation">
+    <img src="motivation.png" alt="motivation" width="100%" height="100%">
+
+  </section>
+
+
+  <div class="message">
+    <a href="https://chatgpt.com/">
+      <img src="message.png" alt="message" height="50px" width="50px" /></a>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="footer_grid">
+      <div>
+        <h1>Quick Links</h1>
+        <ul>
+          <li><a href="collage_resource.html">Home</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h1>Newsletter subscription</h1>
+        <input type="text" placeholder="Search.. " name="Search" />
+        <button type="button" onclick="SubmitEvent">Subscribe</button>
+      </div>
+      <div>
+        <h1>We are social</h1>
+        <a href="https://www.instagram.com/accounts/login/"><img src="instagram-logo.png" width="20px"
+            height="20px" /></a>
+        <a href="https://in.linkedin.com/"><img src="linkedin-logo.png" width="20px" height="20px" /></a>
+        <a href="https://x.com/?lang=en"><img src="twitter.png" width="20px" height="20px" /></a>
+      </div>
+    </div>
+    <p>&copy; 2025 Conference Event. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
