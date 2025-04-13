@@ -19,7 +19,7 @@ A responsive web application for students to **download**, **upload**, and **sha
 
 ## 📸 Preview
 
-![Preview Banner](image/collage_resource.mp4)
+![Preview Banner](https://drive.google.com/file/d/15F-35NwS4NkjA3j5j1kfZ-NJ0eXYk7Ro/view?usp=drive_link)
 
 ---
 
